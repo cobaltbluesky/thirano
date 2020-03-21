@@ -18,6 +18,7 @@ import {
 function PreviewPopup (){
     return(
         <List>
+            {/*reload*/}
             <ListItem button>
                 <ListItemIcon>
                     <Refresh />
@@ -25,6 +26,7 @@ function PreviewPopup (){
                 <ListItemText primary="再読み込み"></ListItemText>
             </ListItem>
 
+            {/*edit*/}
             <ListItem button>
                 <ListItemIcon>
                     <Edit />
@@ -32,6 +34,7 @@ function PreviewPopup (){
                 <ListItemText primary="編集"></ListItemText>
             </ListItem>
 
+            {/*rotate*/}
             <ListItem button>
                 <ListItemIcon>
                     <Rotate90DegreesCcw />
@@ -39,6 +42,7 @@ function PreviewPopup (){
                 <ListItemText primary="90°回転"></ListItemText>
             </ListItem>
 
+            {/*prop*/}
             <ListItem button>
                 <ListItemIcon>
                     <Info />
@@ -48,6 +52,7 @@ function PreviewPopup (){
 
             <Divider />
 
+            {/*remove*/}
             <ListItem button>
                 <ListItemIcon>
                     <Delete />
