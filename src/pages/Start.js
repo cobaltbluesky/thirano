@@ -7,9 +7,25 @@ const Start = () => {
   return (
 
     <div>
-      <div id = "Information">
-        {/* スタートページの内容 */}
-      </div>
+      <h1>Hello警報</h1>
+      <ul id = "Informations">
+          <li>
+            <h2>説明A</h2>
+            <div classname = "explanations">説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</div>
+          </li>
+          <li>
+          <h2>説明B</h2>
+          <div classname = "explanations">説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</div>            
+          </li>
+          <li>
+          <h2>説明C</h2>
+          <div classname = "explanations">説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</div>            
+          </li>
+          <li>
+          <h2>説明D</h2>
+          <div classname = "explanations">説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</div>          
+          </li>
+      </ul>
         <div className = "button-wrapper">
         <Link to = "/view" id = "StartLink" >
           <Button variant = "contained" color = "primary" id = "StartButton">

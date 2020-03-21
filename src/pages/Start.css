@@ -1,8 +1,24 @@
 body{
     background-color: #f8f5f2;
 }
-#Information{
-height: 600px;
+h1{
+    text-align: center;
+}
+#Informations{
+    list-style-type: none;
+    text-align: center;
+}
+li{
+    display: inline-block;
+    background-color: #ffffff;
+    width: 500px;
+    height: 290px;
+    margin: 10px;
+    vertical-align: top;
+}
+.explanations{
+    width: auto;
+    height: auto;
 }
 .button-wrapper{
     text-align: center;
