@@ -5,10 +5,12 @@ h1{
     text-align: center;
 }
 #Informations{
+    /* リストの要素の中央寄せ*/
     list-style-type: none;
     text-align: center;
 }
 li{
+    /* リストの各要素の設定 */
     display: inline-block;
     background-color: #ffffff;
     width: 500px;
@@ -17,17 +19,20 @@ li{
     vertical-align: top;
 }
 .explanations{
+    /* リスト内の説明 */
     width: auto;
     height: auto;
 }
 .button-wrapper{
+    /* ボタンの中央寄せ */
     text-align: center;
-}
-#StartButton{
-    width: 300px;
-    height: 50px;
 }
 #StartLink{
     color: white;
     text-decoration: none;
+}
+#StartButton{
+    /* 一番下のボタン */
+    width: 300px;
+    height: 50px;
 }

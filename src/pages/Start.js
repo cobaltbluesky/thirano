@@ -7,8 +7,12 @@ const Start = () => {
   return (
 
     <div>
-      <h1>Hello警報</h1>
+      <h1>{/*仮タイトル */}Hello警報</h1>
       <ul id = "Informations">
+        {/* 
+          要素の数は仮
+          説明の内容はgunjouさんお願いします 
+          */}
           <li>
             <h2>説明A</h2>
             <div classname = "explanations">説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</div>
@@ -26,13 +30,13 @@ const Start = () => {
           <div classname = "explanations">説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</div>          
           </li>
       </ul>
-        <div className = "button-wrapper">
+      
+      {/* viewに遷移するボタン */}
+      <div className = "button-wrapper">
         <Link to = "/view" id = "StartLink" >
-          <Button variant = "contained" color = "primary" id = "StartButton">
-            さあ、始めよう！
-          </Button>
+          <Button variant = "contained" color = "primary" id = "StartButton">さあ、始めよう！</Button>
         </Link>
-        </div>
+      </div>
     </div>
     
     );
