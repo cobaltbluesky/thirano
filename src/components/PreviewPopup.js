@@ -1,4 +1,7 @@
 import React, {useState} from "react";
+
+import { makeStyles } from '@material-ui/core/styles';
+
 import {
     Divider,
     List,
@@ -15,9 +18,19 @@ import {
     Rotate90DegreesCcw
 } from "@material-ui/icons";
 
+const styles=makeStyles({
+    popupList:{
+        backgroundColor:"blue",
+        position:"absolute",
+        //縦横サイズは適当にいじってください
+        width:400,
+        height:300
+    }
+});
+
 function PreviewPopup (){
     return(
-        <List>
+        <List className={styles.popupList}>
             {/*reload*/}
             <ListItem button>
                 <ListItemIcon>
@@ -62,5 +75,4 @@ function PreviewPopup (){
         </List>
     );
 }
-
 export default PreviewPopup;
