@@ -1,0 +1,14 @@
+#Information{
+height: 600px;
+}
+.button-wrapper{
+    text-align: center;
+}
+#StartButton{
+    width: 300px;
+    height: 50px;
+}
+#StartLink{
+    color: white;
+    text-decoration: none;
+}
