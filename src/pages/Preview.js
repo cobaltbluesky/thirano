@@ -12,9 +12,18 @@ import ipadProyoko from '../img/ipadProyoko.png';
 const useStyles = makeStyles({
   //全体のCSS
   zentai:{
-    display:flex,
-    flexDirection:row,
-    justifyContent:space-between
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-around'
+  },
+  //左側のiframeのCSS
+  device1:{
+    width:665,
+    height:315,
+    top:275,
+    left:90,
+    position:'absolute',
+    zIndex:2
   },
   //左側のiframeのCSS
   device1:{
@@ -51,7 +60,7 @@ const useStyles = makeStyles({
     zIndex:50
   }
 });
-const preview = () => {
+const Preview = () => {
   const classes=useStyles();
   return (
     /* スタートページはこの中を書き換えて */
@@ -65,18 +74,20 @@ const preview = () => {
         iframeをつかっています。
       </iframe>
       <img
+        className={classes.img1}
         alt='flame'
         src={iphone8yoko}
       />
-      <iflame
+      <iframe
         className={classes.device2}
         frameBorder='0'
         title='device2'
         src="https://chunithm.sega.jp/"
       >
         iframeをつかっています。
-      </iflame>
+      </iframe>
       <img
+        className={classes.img2}
         alt='flame'
         src={iphone8yoko}
       />
@@ -84,4 +95,4 @@ const preview = () => {
   );
 };
 
-export default preview;
+export default Preview;
