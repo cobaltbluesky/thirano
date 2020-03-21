@@ -11,9 +11,11 @@ const Start = () => {
         {/* スタートページの内容 */}
       </div>
         <div className = "button-wrapper">
+        <Link to = "/view" id = "StartLink" >
           <Button variant = "contained" color = "primary" id = "StartButton">
-            <Link to = "/view" id = "StartLink" >さあ、始めよう！</Link>
+            さあ、始めよう！
           </Button>
+        </Link>
         </div>
     </div>
     
