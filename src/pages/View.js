@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import shortid from 'shortid';
+import shortid from "shortid";
 
 import AddButton from "../components/AddButton";
-import Divice1 from '../components/Device1';
-import Popup from '../components/Popup';
+import Divice1 from "../components/Device1";
+import Divice2 from "../components/Device2";
+import Popup from "../components/Popup";
 
 const useStyles = makeStyles(theme => ({
   addButton: {
@@ -21,8 +22,8 @@ const View = () => {
   const [deviceList, setDeviceList] = useState([]);
 
   const addDevice = (src, deviceType, isSideways) => {
-    // 画面が1枚以上あったら表示しない
-    if (deviceList.length >= 1) return;
+    // 画面が2枚以上あったら表示しない
+    if (deviceList.length >= 2) return;
 
     const newDevice = {
       src: src, // url
@@ -42,14 +43,25 @@ const View = () => {
   const handlePopupSubmit = (src, deviceType, isSideways) => {
     popupClose();
     addDevice(src, deviceType, isSideways);
-  }
+  };
 
   return (
     /* メインのページはこの中を書き換えて */
     <>
-      <Popup isOpen={isPopupOpen} popupClose={popupClose} onSubmit={handlePopupSubmit}/>
-      {deviceList.map(({src}) => <Divice1 src={src} key={shortid.generate()}/>)}
-      <AddButton className={classes.addButton} onClick={popupOpen}/>
+      <Popup
+        isOpen={isPopupOpen}
+        popupClose={popupClose}
+        onSubmit={handlePopupSubmit}
+      />
+      {deviceList.map(({ src }, index) => {
+        if (index === 0) {
+          return <Divice1 src={src} key={shortid.generate()} />;
+        } else 
+        if (index === 1) {
+          return <Divice2 src={src} key={shortid.generate()} />;
+        }
+      })}
+      <AddButton className={classes.addButton} onClick={popupOpen} />
     </>
   );
 };
