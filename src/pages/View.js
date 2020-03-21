@@ -19,6 +19,7 @@ const View = () => {
   const classes = useStyles();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [deviceList, setDeviceList] = useState([]);
+
   const addDevice = (src, deviceType, isSideways) => {
     // 画面が1枚以上あったら表示しない
     if (deviceList.length >= 1) return;
@@ -34,6 +35,7 @@ const View = () => {
     setDeviceList([...deviceList, newDevice]);
   };
 
+  // ポップアップの開閉を制御する関数
   const popupOpen = () => setIsPopupOpen(true);
   const popupClose = () => setIsPopupOpen(false);
 

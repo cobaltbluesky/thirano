@@ -12,8 +12,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import { FormGroup } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 export default function(props) {
-  // ポップアップ開くボタンボタン（仮）、スマホの種類、外枠の有無
-  const { isOpen, popupClose, onSubmit } = props;
+  // ポップアップ開くボタンボタン（仮）、url、スマホの種類、外枠の有無
+  const {isOpen, popupClose, onSubmit } = props;
   const [text, setText] = React.useState("");
   const [Type, setType] = React.useState();
   const [state, setState] = React.useState({ checkedA: true });
