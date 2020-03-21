@@ -5,6 +5,7 @@ import shortid from 'shortid';
 
 import AddButton from "../components/AddButton";
 import Divice1 from '../components/Device1';
+import Popup from '../components/Popup';
 
 const useStyles = makeStyles(theme => ({
   addButton: {
@@ -16,6 +17,7 @@ const useStyles = makeStyles(theme => ({
 
 const View = () => {
   const classes = useStyles();
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [deviceList, setDeviceList] = useState([]);
   const addDevice = () => {
     // 画面が1枚以上あったら表示しない
@@ -31,9 +33,14 @@ const View = () => {
     // 更新
     setDeviceList([...deviceList, newDevice]);
   };
+
+  const popupOpen = () => setIsPopupOpen(true);
+  const popupClose = () => setIsPopupOpen(false);
+
   return (
     /* メインのページはこの中を書き換えて */
     <>
+      <Popup isOpen={isPopupOpen} popupClose={popupClose}/>
       {deviceList.map(() => <Divice1 key={shortid.generate()}/>)}
       <AddButton className={classes.addButton} onClick={addDevice}/>
     </>
