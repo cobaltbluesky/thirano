@@ -1,10 +1,8 @@
 import React from "react";
+import Preview from "../components/Preview.js";
 
 const View = () => {
-  return (
-    /* メインのページはこの中を書き換えて */
-    <h1>メイン画面</h1>
-  );
+  return <Preview />;
 };
 
 export default View;
