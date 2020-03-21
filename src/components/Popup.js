@@ -85,7 +85,7 @@ export default function(props) {
         </Button>
         <Button
           onClick={() => {
-            onSubmit(Type, state);
+            onSubmit(text, Type, state);
           }}
           color="primary"
         >

@@ -24,9 +24,9 @@ const View = () => {
     if (deviceList.length >= 1) return;
 
     const newDevice = {
-      src: "", // url
-      deviceType: "", // deviceの名前
-      isExistFrame: false, // スマホやタブレットの枠が存在するか
+      src: src, // url
+      deviceType: deviceType, // deviceの名前
+      isExistFrame: isSideways, // スマホやタブレットの枠が存在するか
       isSideways: true // デバイスが横向いてるか
     };
 
@@ -46,7 +46,7 @@ const View = () => {
     /* メインのページはこの中を書き換えて */
     <>
       <Popup isOpen={isPopupOpen} popupClose={popupClose} onSubmit={handlePopupSubmit}/>
-      {deviceList.map(() => <Divice1 key={shortid.generate()}/>)}
+      {deviceList.map(({src}) => <Divice1 src={src} key={shortid.generate()}/>)}
       <AddButton className={classes.addButton} onClick={popupOpen}/>
     </>
   );
