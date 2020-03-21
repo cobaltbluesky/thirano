@@ -13,10 +13,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const AddButton = () => {
+/* 
+className: string
+*/
+const AddButton = props => {
   const classes = useStyles();
+  const { className, onClick } = props;
   return (
-    <Fab className={classes.root}>
+    <Fab className={`${classes.root} ${className}`} onClick={onClick}>
       <Add className={classes.add} />
     </Fab>
   );
