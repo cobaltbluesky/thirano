@@ -19,13 +19,13 @@ const View = () => {
   const classes = useStyles();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [deviceList, setDeviceList] = useState([]);
-  const addDevice = () => {
+  const addDevice = (src, deviceType, isSideways) => {
     // 画面が1枚以上あったら表示しない
     if (deviceList.length >= 1) return;
 
     const newDevice = {
       src: "", // url
-      device: "", // deviceの名前
+      deviceType: "", // deviceの名前
       isExistFrame: false, // スマホやタブレットの枠が存在するか
       isSideways: true // デバイスが横向いてるか
     };
@@ -37,12 +37,17 @@ const View = () => {
   const popupOpen = () => setIsPopupOpen(true);
   const popupClose = () => setIsPopupOpen(false);
 
+  const handlePopupSubmit = (src, deviceType, isSideways) => {
+    popupClose();
+    addDevice(src, deviceType, isSideways);
+  }
+
   return (
     /* メインのページはこの中を書き換えて */
     <>
-      <Popup isOpen={isPopupOpen} popupClose={popupClose}/>
+      <Popup isOpen={isPopupOpen} popupClose={popupClose} onSubmit={handlePopupSubmit}/>
       {deviceList.map(() => <Divice1 key={shortid.generate()}/>)}
-      <AddButton className={classes.addButton} onClick={addDevice}/>
+      <AddButton className={classes.addButton} onClick={popupOpen}/>
     </>
   );
 };

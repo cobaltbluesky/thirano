@@ -13,9 +13,15 @@ import { FormGroup } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 export default function(props) {
   // ポップアップ開くボタンボタン（仮）、スマホの種類、外枠の有無
-  const { isOpen, popupClose } = props;
+  const { isOpen, popupClose, onSubmit } = props;
+  const [text, setText] = React.useState("");
   const [Type, setType] = React.useState();
   const [state, setState] = React.useState({ checkedA: true });
+
+  //urlの変更
+  const handleTextChange = event => {
+    setText(event.target.value);
+  };
 
   //外枠の有無の変更
   const handleCheckedChange = event => {
@@ -37,7 +43,15 @@ export default function(props) {
       <DialogTitle id="form-dialog-title">新しいフォームを作る</DialogTitle>
       <DialogContent>
         <dialogContentText>URL</dialogContentText>
-        <TextField autoFocus id="name" label="" type="URL" fullWidth />
+        <TextField
+          autoFocus
+          value={text}
+          onChange={handleTextChange}
+          id="name"
+          label=""
+          type="URL"
+          fullWidth
+        />
         <Box m="1rem" />
         <FormGroup>
           <dialogContentText>機種</dialogContentText>
@@ -69,7 +83,12 @@ export default function(props) {
         <Button onClick={popupClose} color="secondary">
           キャンセル
         </Button>
-        <Button onClick={popupClose} color="primary">
+        <Button
+          onClick={() => {
+            onSubmit(Type, state);
+          }}
+          color="primary"
+        >
           作成
         </Button>
       </DialogActions>
