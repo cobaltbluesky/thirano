@@ -7,11 +7,15 @@ import Box from "@material-ui/core/Box";
 const useStyles = makeStyles(theme => ({
   root: {
     padding: "48px",
-    backgroundColor:"#FFFFFF"
+    background: "#078080",
+    "&:hover": {
+      backgroundColor: "#12BBBB"
+    }
   },
   add: {
     width: "64px",
     height: "64px",
+    color: "#fff"
   }
 }));
 
@@ -24,7 +28,7 @@ const AddButton = props => {
   return (
     <Fab className={`${classes.root} ${className}`} onClick={onClick}>
       <Box my={-3.6}>
-        <Add className={classes.add}  />
+        <Add className={classes.add} />
       </Box>
     </Fab>
   );

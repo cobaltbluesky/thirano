@@ -15,7 +15,6 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     bottom: "25px",
     right: "25px",
-    background:'#078080'
 }
 }));
 
