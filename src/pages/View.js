@@ -15,7 +15,6 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     bottom: "25px",
     right: "25px",
-    background:'#078080'
 }
 }));
 
@@ -51,7 +50,7 @@ const View = () => {
   return (
     /* メインのページはこの中を書き換えて */
     <>
-      <AppBar position="static">
+      <AppBar>
         <Toolbar>
           <h1>Name</h1>
         </Toolbar>
