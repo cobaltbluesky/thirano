@@ -11,33 +11,35 @@ import iphone11yoko from "../img/iphone11yoko.png";
 import modalStyleList from "../styles/previewStyles";
 
 const Device2 = props => {
-  const {src, deviceType} = props;
+  const { src, deviceType, isExistFrame } = props;
   let classes;
   let imgsrc;
-  switch(deviceType){
+  switch (deviceType) {
     case 1:
-       classes=modalStyleList.iphone8();
-       imgsrc=iphone8yoko;
+      classes = modalStyleList.iphone8();
+      imgsrc = iphone8yoko;
       break;
-    
+
     case 2:
-      classes=modalStyleList.iphone11();
-      imgsrc=iphone11yoko;
+      classes = modalStyleList.iphone11();
+      imgsrc = iphone11yoko;
       break;
-      case 3:
-          classes=modalStyleList.iphone8tate();
-          imgsrc=iphone8;
-          break;
-      case 4:
-          classes=modalStyleList.iphone11tate();
-          imgsrc=iphone11;
-          break;
+    case 3:
+      classes = modalStyleList.iphone8tate();
+      imgsrc = iphone8;
+      break;
+    case 4:
+      classes = modalStyleList.iphone11tate();
+      imgsrc = iphone11;
+      break;
 
     default:
-      classes=modalStyleList.iphone8();
-      imgsrc=iphone8yoko;
+      classes = modalStyleList.iphone8();
+      imgsrc = iphone8yoko;
       break;
   }
+  const hiddenStyle = isExistFrame ? null : { display: "none" };
+
   return (
     <div>
       <iframe
@@ -48,7 +50,12 @@ const Device2 = props => {
       >
         iframeをつかっています。
       </iframe>
-      <img className={classes.img2} alt="flame" src={imgsrc} />
+      <img
+        className={classes.img2}
+        alt="flame"
+        src={imgsrc}
+        style={hiddenStyle}
+      />
     </div>
   );
 };
