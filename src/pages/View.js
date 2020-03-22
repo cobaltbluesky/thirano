@@ -7,8 +7,18 @@ import AddButton from "../components/AddButton";
 import Divice1 from "../components/Device1";
 import Divice2 from "../components/Device2";
 import Popup from "../components/Popup";
+import { Autorenew, CenterFocusStrong } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
+
+  noDeviceText: {
+    position: "absolute",
+    top: "50%",
+    left: "40%",
+    textAlign: "center",
+    fontSize: "30px",
+  },
+
   addButton: {
     position: "fixed",
     bottom: "25px",
@@ -20,6 +30,11 @@ const View = () => {
   const classes = useStyles();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [deviceList, setDeviceList] = useState([]);
+
+  const NoDeviceText = () => {
+    if (!deviceList.length) return <div className = {classes.noDeviceText}>URLが設定されていません</div>;
+    else return null;
+  }
 
   const addDevice = (src, deviceType, isSideways) => {
     // 画面が2枚以上あったら表示しない
@@ -48,6 +63,7 @@ const View = () => {
   return (
     /* メインのページはこの中を書き換えて */
     <>
+      <NoDeviceText className/>
       <Popup
         isOpen={isPopupOpen}
         popupClose={popupClose}
