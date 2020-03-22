@@ -23,7 +23,7 @@ const iphone8tateStyle=makeStyles({
     },
     device2:{
         //右側のiframeのCSS
-        width:344,
+        width:275,
         height:624,
         top:112,
         left:876,

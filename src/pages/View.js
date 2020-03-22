@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 
 import shortid from "shortid";
+import { makeStyles } from "@material-ui/core/styles";
 
 import AddButton from "../components/AddButton";
 import Divice1 from "../components/Device1";
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     bottom: "25px",
     right: "25px",
-}
+  }
 }));
 
 const View = () => {
@@ -69,7 +69,7 @@ const View = () => {
     <>
       <AppBar>
         <Toolbar>
-          <h1>Name</h1>
+          <h1>Smart-Previewer</h1>
         </Toolbar>
       </AppBar>
       <NoDeviceText className/>
