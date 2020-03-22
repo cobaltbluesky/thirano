@@ -71,7 +71,9 @@ const View = () => {
   };
 
   const deleteAllDevice = () => {
-    setDeviceList([]);
+    if (window.confirm("全て削除してもよろしいですか？")) {
+      setDeviceList([]);
+    }
   };
 
   // ポップアップの開閉を制御する関数
