@@ -67,6 +67,11 @@ const View = () => {
   return (
     /* メインのページはこの中を書き換えて */
     <>
+      <AppBar>
+        <Toolbar>
+          <h1>Name</h1>
+        </Toolbar>
+      </AppBar>
       <NoDeviceText className/>
 
       <Popup
