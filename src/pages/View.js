@@ -36,7 +36,7 @@ const View = () => {
   const [deviceList, setDeviceList] = useState([]);
 
   const NoDeviceText = () => {
-    if (!deviceList.length) return <div className = {classes.noDeviceText}>URLが設定されていません</div>;
+    if (!deviceList.length) return <div className = {classes.noDeviceText}  style={{color:"gray"}}>URLが設定されていません</div>;
     else return null;
   }
 
