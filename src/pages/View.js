@@ -7,13 +7,16 @@ import AddButton from "../components/AddButton";
 import Divice1 from "../components/Device1";
 import Divice2 from "../components/Device2";
 import Popup from "../components/Popup";
-
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   addButton: {
     position: "fixed",
     bottom: "25px",
-    right: "25px"
-  }
+    right: "25px",
+    background:'#078080'
+}
 }));
 
 const View = () => {
@@ -48,6 +51,11 @@ const View = () => {
   return (
     /* メインのページはこの中を書き換えて */
     <>
+      <AppBar position="static">
+        <Toolbar>
+          <h1>Name</h1>
+        </Toolbar>
+      </AppBar>
       <Popup
         isOpen={isPopupOpen}
         popupClose={popupClose}

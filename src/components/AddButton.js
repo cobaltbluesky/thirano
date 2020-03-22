@@ -6,11 +6,12 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: "48px"
+    padding: "48px",
+    backgroundColor:"#FFFFFF"
   },
   add: {
     width: "64px",
-    height: "64px"
+    height: "64px",
   }
 }));
 
