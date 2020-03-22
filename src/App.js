@@ -7,10 +7,7 @@ import View from "./pages/View";
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Start} />
-        <Route exact path="/view/" component={View} />
-      </Switch>
+        <Route exact path="/" component={View} />
     </BrowserRouter>
   );
 }
