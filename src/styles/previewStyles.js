@@ -4,35 +4,37 @@ import { makestyles, makeStyles } from "@material-ui/core/styles";
 const iphone8tateStyle=makeStyles({
     device1:{
         //左側のiframeのCSS
-        width:430,
-        height:780,
-        top:140,
-        left:235,
+        width:344,
+        height:624,
+        top:112,
+        left:188,
         position:'absolute',
+        marginTop:70,
         zIndex:2
     },
     img1:{
         //左側のスマホのCSS
         position:'absolute',
-        width:1000,
-        left:-60,
+        width:800,
+        left:-48,
         pointerEvents:'none',
+        marginTop:70,
         zIndex:50
     },
     device2:{
         //右側のiframeのCSS
-        width:430,
-        height:780,
-        top:140,
-        left:970,
+        width:344,
+        height:624,
+        top:112,
+        left:776,
         position:'absolute',
         zIndex:2
     },
     img2:{
         //右側のスマホのCSS
         position:'absolute',
-        width:1000,
-        left:680,
+        width:800,
+        left:544,
         pointerEvents:'none',
         zIndex:50
     }
@@ -157,7 +159,7 @@ const modalStyleList={
     iphone8:iphone8yokoStyle,
     iphone11:iphone11yokoStyle,
     iphone8tate:iphone8tateStyle,
-    iphone11tate:iphone11tateStyles
+    iphone11tate:iphone8tateStyle
 }
 
 export default modalStyleList;
