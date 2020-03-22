@@ -85,11 +85,11 @@ const iphone11tateStyle=makeStyles({
     device1:{
         //左側のiframeのCSS
         width:370,
-        height:780,
+        height:750,
         top:110,
         left:260,
         position:'absolute',
-        marginTop:70,
+        marginTop:32,
         zIndex:2
     },
     img1:{
@@ -98,7 +98,6 @@ const iphone11tateStyle=makeStyles({
         width:1000,
         left:-60,
         pointerEvents:'none',
-        marginTop:70,
         zIndex:50
     },
     device2:{
