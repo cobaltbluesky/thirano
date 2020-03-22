@@ -19,23 +19,25 @@ const iphone8tateStyle=makeStyles({
         left:-48,
         pointerEvents:'none',
         marginTop:70,
-        zIndex:50
+        zIndex:3
     },
     device2:{
         //右側のiframeのCSS
-        width:344,
+        width:375,
         height:624,
         top:112,
-        left:776,
+        left:876,
         position:'absolute',
+        marginTop:70,
         zIndex:2
     },
     img2:{
         //右側のスマホのCSS
         position:'absolute',
         width:800,
-        left:544,
+        left:664,
         pointerEvents:'none',
+        marginTop:70,
         zIndex:50
     }
 });
@@ -79,7 +81,7 @@ const iphone8yokoStyle=makeStyles({
 });
 
 //iphone11縦画面
-const iphone11tateStyles=makeStyles({
+const iphone11tateStyle=makeStyles({
     device1:{
         //左側のiframeのCSS
         width:370,
@@ -87,6 +89,7 @@ const iphone11tateStyles=makeStyles({
         top:110,
         left:260,
         position:'absolute',
+        marginTop:70,
         zIndex:2
     },
     img1:{
@@ -95,23 +98,26 @@ const iphone11tateStyles=makeStyles({
         width:1000,
         left:-60,
         pointerEvents:'none',
+        marginTop:70,
         zIndex:50
     },
     device2:{
         //右側のiframeのCSS
         width:370,
-        height:780,
+        height:760,
         top:110,
-        left:1000,
+        left:1100,
         position:'absolute',
+        marginTop:20,
         zIndex:2
     },
     img2:{
         //右側のスマホのCSS
         position:'absolute',
         width:1000,
-        left:680,
+        left:780,
         pointerEvents:'none',
+        marginTop:0,
         zIndex:50
     }
 });
@@ -159,7 +165,7 @@ const modalStyleList={
     iphone8:iphone8yokoStyle,
     iphone11:iphone11yokoStyle,
     iphone8tate:iphone8tateStyle,
-    iphone11tate:iphone8tateStyle
+    iphone11tate:iphone11tateStyle
 }
 
 export default modalStyleList;
