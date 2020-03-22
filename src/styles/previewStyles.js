@@ -23,10 +23,10 @@ const iphone8tateStyle=makeStyles({
     },
     device2:{
         //右側のiframeのCSS
-        width:375,
-        height:624,
-        top:112,
-        left:876,
+        width:355,
+        height:640,
+        top:100,
+        left:896,
         position:'absolute',
         marginTop:70,
         zIndex:2
@@ -84,10 +84,10 @@ const iphone8yokoStyle=makeStyles({
 const iphone11tateStyle=makeStyles({
     device1:{
         //左側のiframeのCSS
-        width:370,
-        height:750,
-        top:110,
-        left:260,
+        width:378,
+        height:790,
+        top:80,
+        left:265,
         position:'absolute',
         marginTop:32,
         zIndex:2
@@ -102,9 +102,9 @@ const iphone11tateStyle=makeStyles({
     },
     device2:{
         //右側のiframeのCSS
-        width:370,
-        height:760,
-        top:110,
+        width:375,
+        height:780,
+        top:90,
         left:1100,
         position:'absolute',
         marginTop:20,
