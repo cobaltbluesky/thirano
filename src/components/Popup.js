@@ -40,7 +40,7 @@ export default function(props) {
       fullWidth={true}
       maxWidth={"md"}
     >
-      <DialogTitle id="form-dialog-title">新しいフォームを作る</DialogTitle>
+      <DialogTitle id="form-dialog-title">新しいプレビューを作る</DialogTitle>
       <DialogContent>
         <dialogContentText>URL</dialogContentText>
         <TextField
