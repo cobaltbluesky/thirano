@@ -1,0 +1,163 @@
+import { makestyles, makeStyles } from "@material-ui/core/styles";
+
+//iphone8縦画面
+const iphone8tateStyle=makeStyles({
+    device1:{
+        //左側のiframeのCSS
+        width:430,
+        height:780,
+        top:140,
+        left:235,
+        position:'absolute',
+        zIndex:2
+    },
+    img1:{
+        //左側のスマホのCSS
+        position:'absolute',
+        width:1000,
+        left:-60,
+        pointerEvents:'none',
+        zIndex:50
+    },
+    device2:{
+        //右側のiframeのCSS
+        width:430,
+        height:780,
+        top:140,
+        left:970,
+        position:'absolute',
+        zIndex:2
+    },
+    img2:{
+        //右側のスマホのCSS
+        position:'absolute',
+        width:1000,
+        left:680,
+        pointerEvents:'none',
+        zIndex:50
+    }
+});
+
+//iphone8横画面
+const iphone8yokoStyle=makeStyles({
+    //左側のiframeのCSS
+    device1:{
+        width:625,
+        height:365,
+        top:250,
+        left:110,
+        position:'absolute',
+        zIndex:2
+    },
+    //左側のスマホのCSS
+    img1:{
+        position:'absolute',
+        width:850,
+        left:-10,
+        pointerEvents:'none',
+        zIndex:50
+    },
+    //右側のiframeのCSS
+    device2:{
+        width:625,
+        height:365,
+        top:250,
+        left:1020,
+        position:'absolute',
+        zIndex:2
+    },
+    //右側のスマホのCSS
+    img2:{
+        position:'absolute',
+        width:850,
+        left:900,
+        pointerEvents:'none',
+        zIndex:50
+    }
+});
+
+//iphone11縦画面
+const iphone11tateStyles=makeStyles({
+    device1:{
+        //左側のiframeのCSS
+        width:370,
+        height:780,
+        top:110,
+        left:260,
+        position:'absolute',
+        zIndex:2
+    },
+    img1:{
+        //左側のスマホのCSS
+        position:'absolute',
+        width:1000,
+        left:-60,
+        pointerEvents:'none',
+        zIndex:50
+    },
+    device2:{
+        //右側のiframeのCSS
+        width:370,
+        height:780,
+        top:110,
+        left:1000,
+        position:'absolute',
+        zIndex:2
+    },
+    img2:{
+        //右側のスマホのCSS
+        position:'absolute',
+        width:1000,
+        left:680,
+        pointerEvents:'none',
+        zIndex:50
+    }
+});
+
+//iphone11横画面
+const iphone11yokoStyle=makeStyles({
+    //左側のiframeのCSS
+    device1:{
+        width:665,
+        height:315,
+        top:275,
+        left:90,
+        position:'absolute',
+        zIndex:2
+    },
+    //左側のスマホのCSS
+    img1:{
+        position:'absolute',
+        width:850,
+        left:-10,
+        pointerEvents:'none',
+        zIndex:50
+    },
+    //右側のiframeのCSS
+    device2:{
+        width:665,
+        height:315,
+        top:275,
+        left:1000,
+        position:'absolute',
+        zIndex:2
+    },
+    //右側のスマホのCSS
+    img2:{
+        position:'absolute',
+        width:850,
+        left:900,
+        pointerEvents:'none',
+        zIndex:50
+    }
+});
+
+
+const modalStyleList={
+    iphone8:iphone8yokoStyle,
+    iphone11:iphone11yokoStyle,
+    ipadPro:iphone8yokoStyle,
+    pixel6:iphone8yokoStyle
+}
+
+export default modalStyleList;

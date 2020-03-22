@@ -2,14 +2,20 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Fab } from "@material-ui/core";
 import { Add } from "@material-ui/icons";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: "64px"
+    padding: "48px",
+    background: "#078080",
+    "&:hover": {
+      backgroundColor: "#12BBBB"
+    }
   },
   add: {
     width: "64px",
-    height: "64px"
+    height: "64px",
+    color: "#fff"
   }
 }));
 
@@ -21,7 +27,9 @@ const AddButton = props => {
   const { className, onClick } = props;
   return (
     <Fab className={`${classes.root} ${className}`} onClick={onClick}>
-      <Add className={classes.add} />
+      <Box my={-3.6}>
+        <Add className={classes.add} />
+      </Box>
     </Fab>
   );
 };

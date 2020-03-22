@@ -9,6 +9,10 @@ import Divice2 from "../components/Device2";
 import Popup from "../components/Popup";
 import { Autorenew, CenterFocusStrong } from "@material-ui/icons";
 
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
 const useStyles = makeStyles(theme => ({
 
   noDeviceText: {
@@ -22,8 +26,8 @@ const useStyles = makeStyles(theme => ({
   addButton: {
     position: "fixed",
     bottom: "25px",
-    right: "25px"
-  }
+    right: "25px",
+}
 }));
 
 const View = () => {
@@ -64,17 +68,18 @@ const View = () => {
     /* メインのページはこの中を書き換えて */
     <>
       <NoDeviceText className/>
+
       <Popup
         isOpen={isPopupOpen}
         popupClose={popupClose}
         onSubmit={handlePopupSubmit}
       />
-      {deviceList.map(({ src }, index) => {
+      {deviceList.map(({ src, deviceType}, index) => {
         if (index === 0) {
-          return <Divice1 src={src} key={shortid.generate()} />;
+          return <Divice1 src={src} deviceType={deviceType} key={shortid.generate()} />;
         } else 
         if (index === 1) {
-          return <Divice2 src={src} key={shortid.generate()} />;
+          return <Divice2 src={src} deviceType={deviceType} key={shortid.generate()} />;
         }
       })}
       <AddButton className={classes.addButton} onClick={popupOpen} />
