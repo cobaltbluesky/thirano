@@ -61,10 +61,10 @@ export default function(props) {
             value={Type}
             onChange={handleChange}
           >
-            <MenuItem value={1}>iPhone8</MenuItem>
-            <MenuItem value={2}>iPhone11</MenuItem>
-            <MenuItem value={3}>iPad 6th gen</MenuItem>
-            <MenuItem value={4}>Pixel 4</MenuItem>
+            <MenuItem value={1}>iPhone8 横向き</MenuItem>
+            <MenuItem value={2}>iPhone11 横向き</MenuItem>
+            <MenuItem value={3}>iPhone8 縦向き</MenuItem>
+            <MenuItem value={4}>iPhone11 縦向き</MenuItem>
           </Select>
           <Box m="0.5rem" />
           <FormControlLabel

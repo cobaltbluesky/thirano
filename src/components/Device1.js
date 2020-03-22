@@ -5,8 +5,7 @@ import iphone8 from "../img/iphone8.png";
 import iphone8yoko from "../img/iphone8yoko.png";
 import iphone11 from "../img/iphone11.png";
 import iphone11yoko from "../img/iphone11yoko.png";
-import ipadPro from "../img/ipadPro.png";
-import ipadProyoko from "../img/ipadProyoko.png";
+
 
 //スタイル
 import modalStyleList from "../styles/previewStyles";
@@ -25,7 +24,14 @@ const Device1 = props => {
       classes=modalStyleList.iphone11();
       imgsrc=iphone11yoko;
       break;
-
+    case 3:
+      classes=modalStyleList.iphone8tate();
+      imgsrc=iphone8;
+      break;
+    case 4:
+      classes=modalStyleList.iphone11tate();
+      imgsrc=iphone11;
+      break;
     default:
       classes=modalStyleList.iphone8();
       imgsrc=iphone8yoko;

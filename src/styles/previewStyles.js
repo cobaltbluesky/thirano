@@ -156,8 +156,8 @@ const iphone11yokoStyle=makeStyles({
 const modalStyleList={
     iphone8:iphone8yokoStyle,
     iphone11:iphone11yokoStyle,
-    ipadPro:iphone8yokoStyle,
-    pixel6:iphone8yokoStyle
+    iphone8tate:iphone8tateStyle,
+    iphone11tate:iphone11tateStyles
 }
 
 export default modalStyleList;
