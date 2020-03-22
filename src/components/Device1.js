@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 
 //切り抜き端末
 import iphone8 from "../img/iphone8.png";
@@ -9,29 +8,30 @@ import iphone11yoko from "../img/iphone11yoko.png";
 import ipadPro from "../img/ipadPro.png";
 import ipadProyoko from "../img/ipadProyoko.png";
 
-const useStyles = makeStyles({
-  //左側のiframeのCSS
-  device1: {
-    width: 625,
-    height: 365,
-    top: 250,
-    left: 110,
-    position: "absolute",
-    zIndex: 2
-  },
-  //左側のスマホのCSS
-  img1: {
-    position: "absolute",
-    width: 850,
-    left: -10,
-    pointerEvents: "none",
-    zIndex: 50
-  }
-});
+//スタイル
+import modalStyleList from "../styles/previewStyles";
 
 const Device1 = props => {
-  const { src } = props;
-  const classes = useStyles();
+  const { src, deviceType} = props;
+  let classes;
+  let imgsrc;
+  switch(deviceType){
+    case 1:
+      classes=modalStyleList.iphone8();
+      imgsrc=iphone8yoko;
+      break;
+    
+    case 2:
+      classes=modalStyleList.iphone11();
+      imgsrc=iphone11yoko;
+      break;
+
+    default:
+      classes=modalStyleList.iphone8();
+      imgsrc=iphone8yoko;
+      break;
+  }
+  
   return (
     <div>
       <iframe
@@ -42,7 +42,7 @@ const Device1 = props => {
       >
         iframeをつかっています。
       </iframe>
-      <img className={classes.img1} alt="flame" src={iphone8yoko} />
+      <img className={classes.img1} alt="flame" src={imgsrc} />
     </div>
   );
 };

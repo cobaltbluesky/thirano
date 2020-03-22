@@ -53,12 +53,12 @@ const View = () => {
         popupClose={popupClose}
         onSubmit={handlePopupSubmit}
       />
-      {deviceList.map(({ src }, index) => {
+      {deviceList.map(({ src, deviceType}, index) => {
         if (index === 0) {
-          return <Divice1 src={src} key={shortid.generate()} />;
+          return <Divice1 src={src} deviceType={deviceType} key={shortid.generate()} />;
         } else 
         if (index === 1) {
-          return <Divice2 src={src} key={shortid.generate()} />;
+          return <Divice2 src={src} deviceType={deviceType} key={shortid.generate()} />;
         }
       })}
       <AddButton className={classes.addButton} onClick={popupOpen} />
