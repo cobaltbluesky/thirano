@@ -39,6 +39,11 @@ const View = () => {
     if (!deviceList.length) return <div className = {classes.noDeviceText}  style={{color:"gray"}}>URLが設定されていません</div>;
     else return null;
   }
+  const PopupButtonStop = () => {
+    if(deviceList.length!==2) return <AddButton className={classes.addButton} onClick={popupOpen} />;
+    else return null;
+
+  }
 
   const addDevice = (src, deviceType, isSideways) => {
     // 画面が2枚以上あったら表示しない
@@ -87,7 +92,7 @@ const View = () => {
           return <Divice2 src={src} deviceType={deviceType} key={shortid.generate()} />;
         }
       })}
-      <AddButton className={classes.addButton} onClick={popupOpen} />
+      <PopupButtonStop></PopupButtonStop>
     </>
   );
 };
