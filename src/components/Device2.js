@@ -9,29 +9,29 @@ import iphone11yoko from "../img/iphone11yoko.png";
 import ipadPro from "../img/ipadPro.png";
 import ipadProyoko from "../img/ipadProyoko.png";
 
-const useStyles = makeStyles({
-  //右側のiframeのCSS
-  device2: {
-    width: 625,
-    height: 365,
-    top: 250,
-    left: 1020,
-    position: "absolute",
-    zIndex: 2
-  },
-  //右側のスマホのCSS
-  img2: {
-    position: "absolute",
-    width: 850,
-    left: 900,
-    pointerEvents: "none",
-    zIndex: 50
-  }
-});
+//スタイル
+import modalStyleList from "../styles/previewStyles";
 
 const Device2 = props => {
-  const classes = useStyles();
-  const { src } = props;
+  const { src, deviceType} = props;
+  let classes;
+  let imgsrc;
+  switch(deviceType){
+    case 1:
+       classes=modalStyleList.iphone8();
+       imgsrc=iphone8yoko;
+      break;
+    
+    case 2:
+      classes=modalStyleList.iphone11();
+      imgsrc=iphone11yoko;
+      break;
+
+    default:
+      classes=modalStyleList.iphone8();
+      imgsrc=iphone8yoko;
+      break;
+  }
   return (
     <div>
       <iframe
@@ -42,7 +42,7 @@ const Device2 = props => {
       >
         iframeをつかっています。
       </iframe>
-      <img className={classes.img2} alt="flame" src={iphone8yoko} />
+      <img className={classes.img2} alt="flame" src={imgsrc} />
     </div>
   );
 };
