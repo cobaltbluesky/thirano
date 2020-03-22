@@ -55,14 +55,14 @@ const View = () => {
     else return null;
   };
 
-  const addDevice = (src, deviceType, isSideways) => {
+  const addDevice = (src, deviceType, isExistFrame) => {
     // 画面が2枚以上あったら表示しない
     if (deviceList.length >= 2) return;
 
     const newDevice = {
       src: src, // url
       deviceType: deviceType, // deviceの名前
-      isExistFrame: isSideways, // スマホやタブレットの枠が存在するか
+      isExistFrame: isExistFrame, // スマホやタブレットの枠が存在するか
       isSideways: true // デバイスが横向いてるか
     };
 
@@ -80,9 +80,10 @@ const View = () => {
   const popupOpen = () => setIsPopupOpen(true);
   const popupClose = () => setIsPopupOpen(false);
 
-  const handlePopupSubmit = (src, deviceType, isSideways) => {
+  const handlePopupSubmit = (src, deviceType, stateObject) => {
+    const isExistFrame = stateObject["checkedA"];
     popupClose();
-    addDevice(src, deviceType, isSideways);
+    addDevice(src, deviceType, isExistFrame);
   };
 
   return (
@@ -101,12 +102,13 @@ const View = () => {
         onSubmit={handlePopupSubmit}
       />
       <TrashButton onClick={deleteAllDevice} className={classes.trashButton} />
-      {deviceList.map(({ src, deviceType }, index) => {
+      {deviceList.map(({ src, deviceType, isExistFrame }, index) => {
         if (index === 0) {
           return (
             <Divice1
               src={src}
               deviceType={deviceType}
+              isExistFrame={isExistFrame}
               key={shortid.generate()}
             />
           );
@@ -115,6 +117,7 @@ const View = () => {
             <Divice2
               src={src}
               deviceType={deviceType}
+              isExistFrame={isExistFrame}
               key={shortid.generate()}
             />
           );
