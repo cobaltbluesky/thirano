@@ -21,7 +21,7 @@ const TrashButton = props => {
   const classes = useStyles();
   const { className, onClick } = props;
   return (
-    <IconButton className={`${className}`}>
+    <IconButton onClick={onClick} className={`${className}`}>
       <Delete className={`${classes.icon}`} />
     </IconButton>
   );

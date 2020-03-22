@@ -70,6 +70,10 @@ const View = () => {
     setDeviceList([...deviceList, newDevice]);
   };
 
+  const deleteAllDevice = () => {
+    setDeviceList([]);
+  };
+
   // ポップアップの開閉を制御する関数
   const popupOpen = () => setIsPopupOpen(true);
   const popupClose = () => setIsPopupOpen(false);
@@ -94,7 +98,7 @@ const View = () => {
         popupClose={popupClose}
         onSubmit={handlePopupSubmit}
       />
-      <TrashButton className={classes.trashButton} />
+      <TrashButton onClick={deleteAllDevice} className={classes.trashButton} />
       {deviceList.map(({ src, deviceType }, index) => {
         if (index === 0) {
           return (
