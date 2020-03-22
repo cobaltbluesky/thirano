@@ -51,7 +51,7 @@ const View = () => {
   return (
     /* メインのページはこの中を書き換えて */
     <>
-      <AppBar position="static">
+      <AppBar>
         <Toolbar>
           <h1>Name</h1>
         </Toolbar>
